@@ -1,5 +1,4 @@
 import axios from "axios";
-import { toast } from "react-toastify";
 import currencyTypes from "./currencyTypes";
 
 export default function loadAragon(
@@ -27,6 +26,6 @@ export default function loadAragon(
       });
     })
     .catch((error) => {
-      toast.error(error.message);
+      console.error(error.message);
     });
 }

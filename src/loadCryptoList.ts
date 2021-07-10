@@ -1,5 +1,4 @@
 import axios from "axios";
-import { toast } from "react-toastify";
 import currencyTypes from "./currencyTypes";
 
 export default function loadCryptoList(
@@ -17,6 +16,6 @@ export default function loadCryptoList(
       setList(response.data.data.slice(0, 5));
     })
     .catch((error) => {
-      toast.error(error.message);
+      console.error(error.message);
     });
 }
