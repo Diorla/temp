@@ -1,0 +1,181 @@
+.App {
+  background-color: #333;
+  color: white;
+  min-height: 100vh;
+  padding: 0.8rem;
+}
+
+.center-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+.spinner {
+  -webkit-animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: red;
+  }
+  25% {
+    stroke: yellow;
+  }
+  50% {
+    stroke: green;
+  }
+  75% {
+    stroke: blue;
+  }
+  100% {
+    stroke: violet;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+
+button {
+  transition: 0.2s linear;
+}
+
+.login {
+  background-color: #db4437;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  box-shadow: 0 0 2px silver;
+  cursor: pointer;
+}
+
+.login:hover {
+  box-shadow: none;
+}
+
+.new-user {
+  color: white;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+.new-user > button {
+  border: none;
+  padding: 0.6rem;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.new-user > button:hover {
+  background-color: silver;
+}
+
+.balance-title {
+  font-size: 0.9rem;
+}
+
+.balance-value {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.balance-value::after {
+  content: " ETH";
+  font-size: 1.2rem;
+}
+
+.transfer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.transfer-toggle {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 1.8rem;
+  color: white;
+  margin: 0.6rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.transfer-toggle:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+}
+
+.form {
+  flex-direction: column;
+  display: flex;
+  width: clamp(320px, 80%, 480px);
+}
+
+input {
+  margin: 4px 0;
+  padding: 4px;
+  font-size: 1.2rem;
+  background: transparent;
+  border: 1px solid silver;
+  color: white;
+  outline: none;
+}
+
+input:focus {
+  border: 1px solid rgb(139, 139, 139);
+}
+
+.submit-button {
+  width: 200px;
+  font-size: 1rem;
+  padding: 0.2rem;
+  margin: auto;
+  background-color: #fc4907;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+th {
+  text-align: start;
+}
+
+td,
+th {
+  padding: 0.2rem;
+}
